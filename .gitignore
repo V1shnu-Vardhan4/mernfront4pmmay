@@ -1,0 +1,44 @@
+# dependencies
+/node_modules
+
+# production build
+/build
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# editor directories and files
+.vscode
+.idea
+*.sublime-workspace
+*.sublime-project
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# testing
+/coverage
+
+# system
+Thumbs.db
+ehthumbs.db
+
+# vercel
+.vercel
+
+# local fonts/images (optional if storing in public)
+/src/assets/fonts/*
+!/src/assets/fonts/.keep
+
+# if using Mac or Windows generated files
+*.swp
+*.bak
+*.tmp

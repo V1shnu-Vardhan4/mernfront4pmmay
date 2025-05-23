@@ -1,0 +1,230 @@
+.taxi-page .hero {
+  background: url('/public/images/taxi-hero.png') no-repeat center center/cover;
+  height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: white;
+  text-align: left;
+}
+
+.taxi-page .hero .overlay {
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+.taxi-page .hero h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.taxi-page .hero p {
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.taxi-page .features {
+  padding: 20px 50px;
+  text-align: center;
+}
+
+.taxi-page .features h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.taxi-page .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.taxi-page .card {
+  /* background: #fff; */
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
+}
+
+.taxi-page .card img,
+.taxi-page .img-placeholder {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.taxi-page .card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top:0px;
+  text-align: left;
+}
+
+.taxi-page .card p {
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.taxi-page .join-us{
+  background: #004826;
+  color: #ffffff;
+  padding: 30px 0px;
+}
+
+.taxi-page .join-us h2{
+  text-align: center;
+  margin: 0px;
+}
+
+.taxi-page .join-us-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.taxi-page .join-us-item {
+  width: 120px; /* or max-width: 120px */
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.taxi-page .join-us-item .icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taxi-page .join-us-item img {
+  width: 60px;
+  height: 60px;
+}
+
+.taxi-page .join-us-item span {
+  font-size: 14px;
+  line-height: 1.3;
+  display: block;
+}
+
+
+.taxi-page .join-process {
+  background: #014421;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.taxi-page .solutions {
+  padding: 60px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.taxi-page .solution-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.taxi-page .solution-card {
+  text-align: left;
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  width: 230px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.taxi-page .solution-card .icon {
+  width: 48px;
+  height: 48px;
+  background: #4FAE5A;
+  border-radius: 50%;
+}
+
+.taxi-page .solution-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.taxi-page .solution-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.taxi-page .onboarding-section {
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.taxi-page .onboarding-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.taxi-page .onboarding-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.taxi-page .onboarding-content ol {
+  list-style: decimal;
+  padding-left: 20px;
+  text-align: left;
+  color: #14532d;
+}
+
+.taxi-page .onboarding-content ol li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.taxi-page .onboarding-content img {
+  width: 180px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.taxi-page .cta-button {
+  background: #14532d;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.taxi-page .cta-button:hover {
+  background: #0f3d1f;
+}
+
+@media (max-width: 768px) {
+  .taxi-page .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

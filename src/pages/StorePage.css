@@ -1,0 +1,176 @@
+/* StorePage.css */
+
+
+.store-page .hero {
+  background: url('/public/images/store-hero.png') no-repeat center center/cover;
+  height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: white;
+  text-align: left;
+}
+
+.store-page .hero .overlay {
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+.store-page .hero h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.store-page .hero p {
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.store-page .features {
+  padding: 20px 50px;
+  text-align: center;
+}
+
+.store-page .features h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.store-page .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.store-page .card {
+  /* background: #fff; */
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
+}
+
+.store-page .card img,
+.store-page .img-placeholder {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.store-page .card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top:0px;
+  text-align: left;
+}
+
+.store-page .card p {
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.store-page .how-it-works {
+  background-color: #014421;
+  color: white;
+  padding: 60px 20px;
+}
+
+.store-page .how-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-page .img-placeholder.big {
+  width: 400px;
+  height: 400px;
+  background: none;
+  border-radius: 12px;
+}
+
+.store-page .steps {
+  max-width: 500px;
+}
+
+.store-page .steps h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  margin-top:10px
+}
+
+.store-page .steps ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.store-page .steps li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.store-page .contact-btn {
+  background: #4FAE5A;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.store-page .solutions {
+  padding: 60px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.store-page .solution-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.store-page .solution-card {
+  text-align: left;
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  width: 230px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.store-page .solution-card .icon {
+  width: 48px;
+  height: 48px;
+  background: #4FAE5A;
+  border-radius: 50%;
+}
+
+.store-page .solution-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.store-page .solution-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+
+@media (max-width: 768px) {
+  .store-page .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

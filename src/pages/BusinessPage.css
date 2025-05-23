@@ -1,0 +1,257 @@
+
+
+  
+  .business-page .why-join {
+    padding: 20px 60px;
+    text-align: left;
+    background: #004826;
+    color: #ffffff;
+  }
+
+  .business-page .build-fast-section {
+    padding: 0px;
+  }
+  
+  .business-page .build-fast-section h2 {
+    font-size: 24px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 50px;
+  }
+  
+  .business-page .build-fast-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: #EEF2F0;
+    padding: 30px 50px;
+  }
+  
+  .business-page .text-content {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+  }
+  
+  .business-page .text-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+  }
+  
+  .business-page .text-content p {
+    font-size: 14px;
+    color: #707070;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  
+  .business-page .placeholder-image {
+    flex: 1;
+    max-width: 370px;
+    height: auto;
+    background-color: #e2e3e3;
+    border-radius: 12px;
+  }
+  
+  
+  .business-page .features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .business-page .feature-card {
+    background: #f2f2f2;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .business-page .img-placeholder {
+    height: 120px;
+    background: #dcdcdc;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  .business-page .cta-green {
+    background-color: #004826;
+    color: white;
+    padding: 20px 60px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .business-page .cta-content {
+    max-width: 700px;
+    text-align: left;
+  }
+  
+  .business-page .cta-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .business-page .cta-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: #d4d4d4;
+  }
+  
+  .business-page .contact-btn {
+    background-color: #4FAE5A;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .business-page .contact-btn:hover {
+    background-color: #3a984b;
+  }
+  
+  
+  
+  .business-page .solutions {
+    padding: 60px 20px;
+    background: #f5f5f5;
+    text-align: center;
+  }
+  
+  .business-page .solution-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .business-page .solution-card {
+    text-align: left;
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    width: 230px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .business-page .solution-card .icon {
+    width: 48px;
+    height: 48px;
+    background: #4FAE5A;
+    border-radius: 50%;
+  }
+  
+  .business-page .solution-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    margin-top: 10px;
+  }
+  
+  .business-page .solution-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .business-page .features {
+    padding: 20px 50px;
+    text-align: center;
+  }
+  
+  .business-page .features h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .business-page .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .business-page .card {
+    /* background: #fff; */
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
+  }
+  
+  .business-page .card img,
+  .business-page .img-placeholder {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+  
+  .business-page .card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top:0px;
+    text-align: left;
+  }
+  
+  .business-page .card p {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .business-page .hero {
+    background: url('/public/images/business-hero.png') no-repeat center center/cover;
+    height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    text-align: left;
+  }
+  
+  .business-page .hero button{
+    background: #1F66A7;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  .business-page .hero .overlay {
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 800px;
+  }
+  
+  .business-page .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+    max-width: 470px;
+  }
+  
+  .business-page .hero p {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .business-page .grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
