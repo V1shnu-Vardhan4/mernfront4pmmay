@@ -165,3 +165,56 @@ h1, h2{
 main {
   /* padding: 20px; */
 }
+
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .header-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .header-right a {
+    margin: 0 10px 10px 0;
+    font-size: 13px;
+  }
+
+  .tab-switcher {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+    padding: 8px;
+    margin: 16px auto;
+    border-radius: 30px;
+  }
+
+  .tab-switcher button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .footer-logo {
+    padding: 20px 20px 0 20px;
+    width: 80px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+}
