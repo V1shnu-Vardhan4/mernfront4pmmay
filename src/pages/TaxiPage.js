@@ -52,7 +52,7 @@ const TaxiPage = () => {
           <div className="card">
             {/* <img src="/images/taxi-page-three.png" alt="Be Seen by Thousands" /> */}
                 {photos.length >14 &&(
-                 <img src={`https://mernback4pm.onrender.com/photos/${photos[14].filename}`} alt="Image 15"  />
+                 <img src={`https://mernback4pm.onrender.comphotos/${photos[14].filename}`} alt="Image 15"  />
             )}
             <h3>Instant Rides with QR Code Pickups</h3>
             <p>Do Dash allows passengers to scan your QR code and hop on instantly.No waiting. No cancellations. More rides = More earnings.

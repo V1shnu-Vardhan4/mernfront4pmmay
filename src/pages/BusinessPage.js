@@ -121,4 +121,4 @@ const BusinessPage = () => {
   );
 };
 
-export default BusinessPage;
+export default BusinessPage; 
