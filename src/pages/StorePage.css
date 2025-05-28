@@ -2,7 +2,8 @@
 
 
 .store-page .hero {
-  background: url('/public/images/store-hero.png') no-repeat center center/cover;
+   /* background: url('/public/images/store-hero.png') no-repeat center center/cover;  */
+   
   height: 700px;
   position: relative;
   display: flex;

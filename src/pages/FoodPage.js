@@ -1,11 +1,23 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './FoodPage.css';
+import axios from 'axios';
 
 const FoodPage = () => {
+  const [photos,setPhotos] = useState([])
+  useEffect(()=>{
+    axios.get(`https://mernback4pm.onrender.com/photo`)
+    .then((res)=>{
+      setPhotos(res.data)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  })
   return (
     <div className="food-page">
-      <section className="hero">
+      {photos.length >6 && (
+         <section className="hero"  style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[6].filename}) no-repeat center center/cover`,}}>
         <div className="overlay">
           <h1>Your Food. Our Tech. Everyone’s Delight.</h1>
           <p>
@@ -14,6 +26,8 @@ const FoodPage = () => {
           <button>Join us</button>
         </div>
       </section>
+
+      )}
 
       <section className="why-join">
         <h2>Why Join Do Dash?</h2>
@@ -28,12 +42,18 @@ const FoodPage = () => {
       <section className="features">
         <div className="grid">
           <div className="card">
-            <img src="/images/food-page-one.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/food-page-one.png" alt="Be Seen by Thousands" /> */}
+            {photos.length >7 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[7].filename}`} alt="Image 8" style={{height:'530px',width:'600px'}} />
+            )}
             <h3>Maximum Visibility, Low Liability</h3>
             <p>Do Dash allows users to order food and groceries in one order. That means New customer segments, Higher order volumes & Shared delivery costs.</p>
           </div>
           <div className="card">
-            <img src="/images/food-page-two.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/food-page-two.png" alt="Be Seen by Thousands" /> */}
+            {photos.length >8 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[8].filename}`} alt="Image 9" style={{height:'530px',width:'600px'}} />
+            )}
             <h3>Delivery at Your Convenience</h3>
             <p>Our trained fleet handles the pickup and delivery. All you need to do?Cook. Pack. Prosper.</p>
           </div>
@@ -47,7 +67,10 @@ const FoodPage = () => {
           <h3>Lower Commissions, Higher Profits</h3>
           <p>Unlike other platforms that take a big bite out of your revenue, Do Dash charges a minimal commission. Designed to support local businesses, not drain them. We grow together by ensuring your margins stay healthy, and your success stays sustainable.</p>
         </div>
-        <img src="images/food-hero-two.png" />
+        {/* <img src="images/food-hero-two.png" /> */}
+           {photos.length >9 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[9].filename}`} alt="Image 10" />
+            )}
       </section>
 
       <section className="join-us">
@@ -75,7 +98,10 @@ const FoodPage = () => {
 
       <section className="how-it-works">
         <div className="how-grid">
-          <img className="img-placeholder big" src="/images/food-steps.png"/>
+          {/* <img className="img-placeholder big" src="/images/food-steps.png"/> */}
+             {photos.length >10 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[10].filename}`} alt="Image 11" style={{height:'600px',width:'600px'}} />
+            )}
           <div className="steps">
             <h2>How it Works?</h2>
             <ul>

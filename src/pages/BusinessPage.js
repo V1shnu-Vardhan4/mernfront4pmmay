@@ -1,11 +1,21 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './BusinessPage.css';
+import axios from 'axios';
 
 const BusinessPage = () => {
+  const [photos,setPhotos] = useState([])
+  useEffect(()=>{
+    axios.get(`https://mernback4pm.onrender.com/photo`)
+    .then((res)=>{
+      setPhotos(res.data)
+    })
+    .catch(err => console.log(err))
+  })
   return (
     <div className="business-page">
-      <section className="hero">
+      {photos.length >17 && (
+        <section className="hero" style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[17].filename}) no-repeat center center/cover`,}}>
         <div className="overlay">
           <h1>One App. Infinite Possibilities. A Platform Built to Scale.</h1>
           <p>
@@ -14,6 +24,8 @@ const BusinessPage = () => {
           <button>Contact us</button>
         </div>
       </section>
+
+      )}
 
       <section class="build-fast-section">
         <h2>Build Fast. Earn Smart. Grow with Do Dash.</h2>
@@ -36,7 +48,11 @@ const BusinessPage = () => {
             <p>We handle tech, logistics, and payments—you just focus on the products and your brand.</p>
           </div>
 
-          <div class="placeholder-image"></div>
+          <div class="placeholder-image">
+                  {photos.length >18 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[18].filename}`} alt="Image 19" style={{width:'400px',height:'300px'}}  />
+            )}
+          </div>
         </div>
       </section>
 
@@ -44,14 +60,20 @@ const BusinessPage = () => {
       <section className="features">
         <div className="grid">
           <div className="card">
-            <img src="/images/businesspage-one.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/businesspage-one.png" alt="Be Seen by Thousands" /> */}
+                  {photos.length >16 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[19].filename}`} alt="Image 20"  />
+            )}
             <h3>Dark Store & Micro-Warehouse</h3>
             <p>Turn a small space into a powerful micro-warehouse that fuels your
               Pocket. Integrate your space with Do Dash and start earning from every
               order in your area, no inventory investment, just pure fulfilment profit.</p>
           </div>
           <div className="card">
-            <img src="/images/businesspage-two.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/businesspage-two.png" alt="Be Seen by Thousands" /> */}
+                  {photos.length >16 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[20].filename}`} alt="Image 21"  />
+            )}
             <h3>Build your Brand, Food or FMCG</h3>
             <p>Whether you’re launching a signature dish or packaging your own
               product line, Do Dash helps you reach the right customers, fast. Create,

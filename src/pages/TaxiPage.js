@@ -1,11 +1,23 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './TaxiPage.css';
+import axios from 'axios';
 
 const TaxiPage = () => {
+  const [photos,setPhotos] = useState([])
+  useEffect(()=>{
+    axios.get(`https://mernback4pm.onrender.com/photo`)
+    .then((res)=>{
+      setPhotos(res.data)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  })
   return (
     <div className="taxi-page">
-      <section className="hero">
+      {photos.length >11 &&(
+        <section className="hero"  style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[11].filename}) no-repeat center center/cover`,}}>
         <div className="overlay">
           <h1>Earn more. Ride freely. Grow with us.</h1>
           <p>
@@ -15,28 +27,42 @@ const TaxiPage = () => {
         </div>
       </section>
 
+      )}
+
       <section className="features">
         <h2>Drive Less. Earn More. Live Better.</h2>
         <div className="grid">
           <div className="card">
-            <img src="/images/taxi-page-one.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/taxi-page-one.png" alt="Be Seen by Thousands" /> */}
+                {photos.length >12 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[12].filename}`} alt="Image 13"  />
+            )}
             <h3>Lowest Commissions Ever</h3>
             <p>We keep our commissions low, so you keep more of your hard-earned money. No hidden charges. No unfair cuts. Just clear payouts every week</p>
           </div>
           <div className="card">
-            <img src="/images/taxi-page-two.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/taxi-page-two.png" alt="Be Seen by Thousands" /> */}
+                {photos.length >13 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[13].filename}`} alt="Image 14"  />
+            )}
             <h3>100% Flexibility</h3>
             <p>You choose when to work. Full-time or part-time, day or night. Accept
             rides when you're free, Go online anytime, Pause anytime no penalties.</p>
           </div>
           <div className="card">
-            <img src="/images/taxi-page-three.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/taxi-page-three.png" alt="Be Seen by Thousands" /> */}
+                {photos.length >14 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[14].filename}`} alt="Image 15"  />
+            )}
             <h3>Instant Rides with QR Code Pickups</h3>
             <p>Do Dash allows passengers to scan your QR code and hop on instantly.No waiting. No cancellations. More rides = More earnings.
             </p>
           </div>
           <div className="card">
-            <img src="/images/store-page-four.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/store-page-four.png" alt="Be Seen by Thousands" /> */}
+                  {photos.length >15 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[15].filename}`} alt="Image 16"  />
+            )}
             <h3>Not Just Rides, More Ways to Earn</h3>
             <p>
             Do Dash is not only for taxi rides. You also get Grocery delivery tasks,
@@ -81,7 +107,10 @@ const TaxiPage = () => {
             <li>Get verified under 30 mins</li>
             <li>Start earning immediately!</li>
           </ol>
-          <img src="/images/taxi-steps.png" alt="Download Do Dash" />
+          {/* <img src="/images/taxi-steps.png" alt="Download Do Dash" /> */}
+                {photos.length >16 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[16].filename}`} alt="Image 17"  />
+            )}
         </div>
         <button class="cta-button">Download app</button>
       </section>
@@ -114,4 +143,4 @@ const TaxiPage = () => {
   );
 };
 
-export default TaxiPage;
+export default TaxiPage; 

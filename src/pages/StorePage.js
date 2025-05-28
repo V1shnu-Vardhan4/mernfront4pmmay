@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'
 import './StorePage.css';
 
 const StorePage = () => {
+  const [photos,setPhotos] = useState([])
+  useEffect(()=>{
+    axios.get(`https://mernback4pm.onrender.com/photo`)
+    .then((res)=>{
+      setPhotos(res.data)
+    })
+    .catch((err)=>{
+      console.log(err)
+    },[])
+  })
   return (
     <div className="store-page">
       {/* HERO SECTION */}
-      <section className="hero">
+      {photos.length >0 &&(
+         <section className="hero"    style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[0].filename}) no-repeat center center/cover`,}}>
+        
         <div className="overlay">
           <h1>The Fastest Way to Grow Your Sales</h1>
           <p>
@@ -15,23 +28,34 @@ const StorePage = () => {
           </p>
         </div>
       </section>
+      )}
 
       {/* FEATURES SECTION */}
       <section className="features">
         <h2>Unmatched Local Reach & Customer Acquisition</h2>
         <div className="grid">
           <div className="card">
-            <img src="/images/store-page-one.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/store-page-one.png" alt="Be Seen by Thousands" /> */}
+            {photos.length >1 && (
+                  <img src={`https://mernback4pm.onrender.com/photos/${photos[1].filename}`} alt="Image 2" />
+            )}
+
             <h3>Be Seen by Thousands Daily</h3>
             <p>Your store pops up in the Do Dash app for every active user right at the moment they need you.</p>
           </div>
           <div className="card">
-            <img src="/images/store-page-two.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/store-page-two.png" alt="Be Seen by Thousands" /> */}
+            {photos.length >2 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[2].filename}`} alt="Image 3" />
+            )}
             <h3>Reach your customers in 7 mins</h3>
             <p>Meet the growing demand for instant gratification with guaranteed deliveries in 10 minutes.</p>
           </div>
           <div className="card">
-            <img src="/images/store-page-three.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/store-page-three.png" alt="Be Seen by Thousands" /> */}
+            {photos.length >3 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[3].filename}`} alt="Image 4" />
+            )}
             <h3>Targeted Engagement</h3>
             <p>
               By leveraging Do Dash's cross-platform services such as food delivery and bike taxi integration your
@@ -39,7 +63,10 @@ const StorePage = () => {
             </p>
           </div>
           <div className="card">
-            <img src="/images/store-page-four.png" alt="Be Seen by Thousands" />
+            {/* <img src="/images/store-page-four.png" alt="Be Seen by Thousands" /> */}
+            {photos.length >4 &&(
+                 <img src={`https://mernback4pm.onrender.com/photos/${photos[4].filename}`} alt="Image 5" />
+            )}
             <h3>Virtual Footfall</h3>
             <p>
               Each on-demand delivery or in-store pickup is a new customer touchpoint—driving real-world visits and
@@ -52,7 +79,10 @@ const StorePage = () => {
       {/* HOW IT WORKS SECTION */}
       <section className="how-it-works">
         <div className="how-grid">
-          <img className="img-placeholder big" src="/images/steps.png"/>
+          {/* <img className="img-placeholder big" src="/images/steps.png"/> */}
+          {photos.length >5 &&(
+               <img src={`https://mernback4pm.onrender.com/photos/${photos[5].filename}`} alt="Image 6" />
+          )}
           <div className="steps">
             <h2>How it Works?</h2>
             <ul>
@@ -92,3 +122,7 @@ const StorePage = () => {
 };
 
 export default StorePage;
+
+
+
+
