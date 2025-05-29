@@ -15,7 +15,7 @@ const BusinessPage = () => {
   return (
     <div className="business-page">
       {photos.length >17 && (
-        <section className="hero" style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[17].filename}) no-repeat center center/cover`,}}>
+        <section className="hero"  style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[17].filename}) no-repeat center center/cover`,}}>
         <div className="overlay">
           <h1>One App. Infinite Possibilities. A Platform Built to Scale.</h1>
           <p>

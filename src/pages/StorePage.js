@@ -10,14 +10,14 @@ const StorePage = () => {
       setPhotos(res.data)
     })
     .catch((err)=>{
-      console.log(err)
+      console.log(err) 
     },[])
   })
   return (
     <div className="store-page">
       {/* HERO SECTION */}
-      {photos.length >0 &&(
-         <section className="hero"    style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[0].filename}) no-repeat center center/cover`,}}>
+      {photos.length > 11 && (
+                <section className="hero"  style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[11].filename}) no-repeat center center/cover`,}}>
         
         <div className="overlay">
           <h1>The Fastest Way to Grow Your Sales</h1>
@@ -29,6 +29,7 @@ const StorePage = () => {
         </div>
       </section>
       )}
+  
 
       {/* FEATURES SECTION */}
       <section className="features">

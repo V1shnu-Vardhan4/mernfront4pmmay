@@ -9,25 +9,26 @@ const FoodPage = () => {
     axios.get(`https://mernback4pm.onrender.com/photo`)
     .then((res)=>{
       setPhotos(res.data)
+
     })
     .catch((err)=>{
       console.log(err)
     })
   })
   return (
-    <div className="food-page">
-      {photos.length >6 && (
-         <section className="hero"  style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[6].filename}) no-repeat center center/cover`,}}>
-        <div className="overlay">
-          <h1>Your Food. Our Tech. Everyone’s Delight.</h1>
-          <p>
-            At Do Dash, we believe the best meals deserve the best reach. And here’s what we bring to your table:
-          </p>
-          <button>Join us</button>
-        </div>
-      </section>
+   <div className="food-page">
+  {photos.length > 17 && (
+            <section className="hero"  style={{background: `url(https://mernback4pm.onrender.com/photos/${photos[17].filename}) no-repeat center center/cover`,}}>
 
-      )}
+      <div className="overlay">
+        <h1>Your Food. Our Tech. Everyone’s Delight.</h1>
+        <p>
+          At Do Dash, we believe the best meals deserve the best reach. And here’s what we bring to your table:
+        </p>
+        <button>Join us</button>
+      </div>
+    </section>
+  )}
 
       <section className="why-join">
         <h2>Why Join Do Dash?</h2>
