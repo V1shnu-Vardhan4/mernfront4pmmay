@@ -8,7 +8,7 @@ import Icon from './components/common/Icon';
 import './styles/global.css';
 import JobList from './pages/JobList';
 import './pages/job.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   const [activeTab, setActiveTab] = useState('store');
@@ -78,10 +78,6 @@ function App() {
         </div>
       </footer>
 
-
-      <Routes>
-        <Route path="/jobs" element={<JobList />} />
-      </Routes>
 
       
 
