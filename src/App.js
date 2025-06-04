@@ -6,6 +6,9 @@ import TaxiPage from './pages/TaxiPage';
 import BusinessPage from './pages/BusinessPage';
 import Icon from './components/common/Icon';
 import './styles/global.css';
+import JobList from './pages/JobList';
+import './pages/job.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [activeTab, setActiveTab] = useState('store');
@@ -15,12 +18,16 @@ function App() {
       case 'food': return <FoodPage />;
       case 'taxi': return <TaxiPage />;
       case 'business': return <BusinessPage />;
+       case 'jobs': return <JobList />;
+      
       default: return <StorePage />;
     }
   };
 
   return (
     <div>
+
+      
       <header className="main-header">
         <div className="header-left">
           <img src="/images/header-logo.png"/>
@@ -36,9 +43,12 @@ function App() {
         <button className={activeTab === 'food' ? 'active' : ''} onClick={() => setActiveTab('food')}>Food</button>
         <button className={activeTab === 'taxi' ? 'active' : ''} onClick={() => setActiveTab('taxi')}>Taxi</button>
         <button className={activeTab === 'business' ? 'active' : ''} onClick={() => setActiveTab('business')}>Business</button>
+        <button className={activeTab === 'jobs' ? 'active' : ''} onClick={() => setActiveTab('jobs')}>Jobs</button>
       </div>
 
       <main>{renderPage()}</main>
+      
+
       <footer className="footer">
         <img className="footer-logo" src="/images/footer-logo.png"/>
         <div className='footer-menu'>
@@ -67,6 +77,13 @@ function App() {
         </div>
         </div>
       </footer>
+
+
+      <Routes>
+        <Route path="/jobs" element={<JobList />} />
+      </Routes>
+
+      
 
     </div>
   );
